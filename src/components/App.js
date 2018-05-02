@@ -1,21 +1,18 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Card from './Card.js';
+import data from '../sampleData/UIE-InterviewProject.json';
+import '../styles/App.css';
 
 class App extends Component {
+
   render() {
+    console.log(data);
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        <Card />
       </div>
     );
   }
-}
+};
 
 export default App;
