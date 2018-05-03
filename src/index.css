@@ -1,0 +1,14 @@
+/* css variables */
+
+:root {
+  --gray: lightgray;
+  --bright-green: #56C65E;
+}
+
+
+body {
+  background-color: lightskyblue;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}

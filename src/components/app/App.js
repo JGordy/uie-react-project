@@ -1,16 +1,16 @@
 import React, { Component } from 'react';
-import Card from './Card.js';
-import data from '../sampleData/UIE-InterviewProject.json';
-import '../styles/App.css';
+import Card from '../card/Card.js';
+import data from '../../sampleData/UIE-InterviewProject.json';
+import './App.css';
 
 class App extends Component {
-
+  // TODO add sorting and pagination
   render() {
 
     let dataCards = data.map((card, index) => {
-      console.log(card);
+      const showBridge = card.showBridge || false;
       return (
-        <Card key={index} heading={card.Heading} subHeading={card.Subheading} price={card.Price}/>
+        <Card key={index} heading={card.Heading} subHeading={card.Subheading} price={card.Price} showBridge={showBridge}/>
       );
     });
 
