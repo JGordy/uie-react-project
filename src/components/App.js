@@ -6,10 +6,19 @@ import '../styles/App.css';
 class App extends Component {
 
   render() {
-    console.log(data);
+
+    let dataCards = data.map((card, index) => {
+      console.log(card);
+      return (
+        <Card key={index} heading={card.Heading} subHeading={card.Subheading} price={card.Price}/>
+      );
+    });
+
     return (
-      <div className="App">
-        <Card />
+      <div className="App container">
+        <div className="row">
+          {dataCards}
+        </div>
       </div>
     );
   }
