@@ -9,14 +9,14 @@ export default class Card extends Component {
       backgroundSize: '290%',
       backgroundRepeat: 'no-repeat',
       backgroundPosition: 'center'
-    }
+    };
     let mosaicStyles = {
       backgroundImage: `url(${mosaicImage})`,
       backgroundSize: '35%',
       backgroundRepeat: 'repeat'
-    }
+    };
     return showBridge ? bridgeStyles : mosaicStyles;
-  }
+  };
 
   render() {
     const { heading, subHeading, price, showBridge } = this.props;
@@ -34,11 +34,11 @@ export default class Card extends Component {
         <p className="price text-right">${price}</p>
       </div>
     );
-  }
+  };
 };
 
 const bridgeImage = 'http://res.cloudinary.com/bguggie/image/upload/v1425514888/wide_ggbridge_bg_teneax.jpg';
 
-const mosaicImage = 'http://res.cloudinary.com/bguggie/image/upload/v1425514882/darktiles_bg_gike55.jpg'
+const mosaicImage = 'http://res.cloudinary.com/bguggie/image/upload/v1425514882/darktiles_bg_gike55.jpg';
 
 const emptyImage = 'http://res.cloudinary.com/bguggie/image/upload/v1425514736/place_holder_zuvywg.png';
