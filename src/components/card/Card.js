@@ -3,14 +3,29 @@ import './card.css';
 
 export default class Card extends Component {
 
+  handleBackgroundImage = (showBridge) => {
+    let bridgeStyles = {
+      backgroundImage: `url(${bridgeImage})`,
+      backgroundSize: '290%',
+      backgroundRepeat: 'no-repeat',
+      backgroundPosition: 'center'
+    }
+    let mosaicStyles = {
+      backgroundImage: `url(${mosaicImage})`,
+      backgroundSize: '35%',
+      backgroundRepeat: 'repeat'
+    }
+    return showBridge ? bridgeStyles : mosaicStyles;
+  }
+
   render() {
     const { heading, subHeading, price, showBridge } = this.props;
-    let backgroundImage = showBridge ? {backgroundImage: `url(${bridgeImage})`} : {backgroundImage: `url(${mosaicImage})`};
+    let backgroundImage = this.handleBackgroundImage(showBridge);
 
     return(
       <div className="Card card">
         <div className="image" style={backgroundImage}>
-          {!showBridge ? <img className="empty-image" src={emptyImage}/> : ''}
+          {!showBridge ? <img className="empty-image" src={emptyImage} alt="empty" /> : ''}
         </div>
         <div className="headings">
           <h3 className="heading text-left">{heading}</h3>
