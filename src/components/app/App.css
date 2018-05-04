@@ -19,6 +19,14 @@
   margin: 0 auto;
 }
 
+@media screen and (max-width: 980px) {
+  .row {
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+}
+
 @media screen and (max-width: 768px) {
   .App {
     padding: 0;

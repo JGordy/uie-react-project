@@ -46,10 +46,21 @@
 
 @media screen and (max-width: 980px) {
   .card {
-    flex: 0 1 16%;
-    height: 250px;
-    margin: 30px;
-    margin-right: 0;
+    flex-direction: row;
+    flex: 0 1 30%;
+    height: 150px;
+    margin: 5px;
+  }
+
+  .image {
+    background-size: cover !important;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 10px;
+  }
+
+  .headings {
+    padding-top: 0.5rem;
+    flex-basis: 70%;
   }
 
   .heading {
@@ -58,6 +69,14 @@
 
   .sub-heading {
     font-size: 12px;
+  }
+
+  .price {
+    border: none;
+    font-size: 20px;
+    position: absolute;
+    bottom: 0;
+    right: 10px;
   }
 }
 
@@ -70,13 +89,7 @@
     margin: 10px;
   }
 
-  .image {
-    border-top-right-radius: 0px;
-    border-bottom-left-radius: 10px;
-  }
-
   .headings {
-    padding-top: 0.5rem;
     flex-basis: 90%;
   }
 
@@ -87,13 +100,5 @@
   .sub-heading {
     font-size: 16px;
     color: rgba(0,0,0,0.5);
-  }
-
-  .price {
-    border: none;
-    font-size: 20px;
-    position: absolute;
-    bottom: 0;
-    right: 10px;
   }
 }
