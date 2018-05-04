@@ -1,6 +1,7 @@
 .card {
   border-radius: 10px;
-  margin: 15px;
+  margin: 35px;
+  margin-right: 0;
   width: 195px;
   height: 350px;
   display: flex;
@@ -45,26 +46,54 @@
 
 @media screen and (max-width: 980px) {
   .card {
-    flex: 1 1 28%;
+    flex: 0 1 16%;
+    height: 250px;
+    margin: 30px;
+    margin-right: 0;
+  }
+
+  .heading {
+    font-size: 16px;
+  }
+
+  .sub-heading {
+    font-size: 12px;
   }
 }
 
 @media screen and (max-width: 768px) {
   .card {
+    flex-direction: row;
     flex: 1 1 100%;
-    height: 80vh;
+    height: 135px;
+    position: relative;
+    margin: 10px;
+  }
+
+  .image {
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 10px;
+  }
+
+  .headings {
+    padding-top: 0.5rem;
+    flex-basis: 90%;
   }
 
   .heading {
-    font-size: 32px;
-  }
-
-  .sub-heading {
     font-size: 20px;
   }
 
+  .sub-heading {
+    font-size: 16px;
+    color: rgba(0,0,0,0.5);
+  }
+
   .price {
-    font-size: 28px;
-    padding-bottom: 1rem;
+    border: none;
+    font-size: 20px;
+    position: absolute;
+    bottom: 0;
+    right: 10px;
   }
 }

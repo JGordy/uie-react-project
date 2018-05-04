@@ -10,18 +10,18 @@ export default class Filter extends Component {
       return (
         <span key={index} style={{margin: '1rem'}}>
           <label style={{marginLeft: '0.5rem'}}>
-            <input type='radio' className="form-check-input" name='sort' value={option} checked={this.props.sortBy === option} onChange={() => this.props.handleState(option)}/>
+            <input type='radio' className="form-check-input" name='sort' value={option} checked={this.props.sortBy === option} onChange={this.props.handleUpdateState('sortBy')}/>
             {option}
           </label>
         </span>
       );
     });
-  }
+  };
 
   render() {
-
     return(
-      <div className="Filter">
+      <div className="Filter" style={{margin: '1.5rem'}}>
+        <span style={{marginRight: '1rem'}}>Sort by: </span>
         {this.createRadios()}
       </div>
     );

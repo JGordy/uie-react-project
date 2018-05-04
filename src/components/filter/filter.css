@@ -1,0 +1,23 @@
+
+
+@media screen and (max-width: 768px) {
+
+  .Filter {
+    background-color: rgba(255,255,255,1);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 5;
+    width: 100%;
+    padding: 1rem;
+    margin: 0 !important;
+  }
+
+  span:first-child {
+    display: none;
+  }
+
+  span:not(:first-child) {
+    margin: 0 1rem;
+  }
+}
